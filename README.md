@@ -6,7 +6,7 @@ This is the assignment on Mini Bootcamp #2 by HelloSpec for learning about how t
 
 ## Guide
 
-- [Thai Guide]()
+- [Thai Guide](https://github.com/lebrancconvas/MBC2-Assignment-Vite/tree/master/docs/Thai-Guide)
   
-- [English Guide]()
+- [English Guide](https://github.com/lebrancconvas/MBC2-Assignment-Vite/tree/master/docs/Eng-Guide)
   
