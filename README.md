@@ -1,4 +1,4 @@
-# MBC2-Assignment-Vite
+# MBC2-Assignment-WebApp-Setup
 
 ## Overview
 
