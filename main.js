@@ -15,7 +15,6 @@ balance.innerHTML = '0';
 
 // Method when clicking on add coin button.
 addCoinButton.addEventListener('click', () => {
-  // parseInt(balance.innerHTML) += 10;
   let balanceNumber = parseInt(balance.innerHTML);
   balanceNumber += 10;
   balance.innerHTML = balanceNumber;
@@ -24,7 +23,6 @@ addCoinButton.addEventListener('click', () => {
 
 // Method when clicking on add bill button. 
 addBillButton.addEventListener('click', () => {
-  // parseInt(balance.innerHTML) += 100;
   let balanceNumber = parseInt(balance.innerHTML);
   balanceNumber += 100;
   balance.innerHTML = balanceNumber;
