@@ -1,7 +1,32 @@
-import './style.css'
+import './style.css';
+import coinImgURL from './assets/coin-64.png';
+import billImgURL from './assets/bill-64.png';
 
-document.querySelector('#app').innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-  <div>Hello MBC#2. I'm Poom, Nice to meet you.</div>
-`
+const balance = document.getElementById('balance');
+const display = document.getElementById('display');
+
+const addCoinButton = document.getElementById('addcoin');
+const addBillButton = document.getElementById('addbill');
+
+const coinImg = `<img src="${coinImgURL}" alt="coin" />`;
+const billImg = `<img src="${billImgURL}" alt="bill" />`;
+
+balance.innerHTML = '0';
+
+// Method when clicking on add coin button.
+addCoinButton.addEventListener('click', () => {
+  // parseInt(balance.innerHTML) += 10;
+  let balanceNumber = parseInt(balance.innerHTML);
+  balanceNumber += 10;
+  balance.innerHTML = balanceNumber;
+  display.insertAdjacentHTML('beforeend', coinImg);
+});
+
+// Method when clicking on add bill button. 
+addBillButton.addEventListener('click', () => {
+  // parseInt(balance.innerHTML) += 100;
+  let balanceNumber = parseInt(balance.innerHTML);
+  balanceNumber += 100;
+  balance.innerHTML = balanceNumber;
+  display.insertAdjacentHTML('beforeend', billImg); 
+});
