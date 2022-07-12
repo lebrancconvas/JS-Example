@@ -44,6 +44,10 @@ body {
   background-color: #00bfa5;
 }
 
+#addcoin:active, #addbill:active {
+  transform: scale(0.98);
+}
+
 #display {
   text-align: left; 
   margin: 0 30%;
