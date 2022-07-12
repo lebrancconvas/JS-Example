@@ -1,4 +1,5 @@
 import './style.css';
+import JSConfetti from 'js-confetti';
 import coinImgURL from './assets/coin-64.png';
 import billImgURL from './assets/bill-64.png';
 
@@ -11,7 +12,15 @@ const addBillButton = document.getElementById('addbill');
 const coinImg = `<img src="${coinImgURL}" alt="coin" />`;
 const billImg = `<img src="${billImgURL}" alt="bill" />`;
 
+const jsconfetti = new JSConfetti();
+
 balance.innerHTML = '0';
+
+const minBalanceToRich = 1000
+const maxBalanceToRich = 2000;
+const targetBalanceToRich = Math.floor(Math.random() * (maxBalanceToRich - minBalanceToRich) + minBalanceToRich);
+
+console.log(`targetBalanceToRich: ${targetBalanceToRich}`); // Debugging. Remove later.
 
 // Method when clicking on add coin button.
 addCoinButton.addEventListener('click', () => {
@@ -19,6 +28,10 @@ addCoinButton.addEventListener('click', () => {
   balanceNumber += 10;
   balance.innerHTML = balanceNumber;
   display.insertAdjacentHTML('beforeend', coinImg);
+
+  if(balanceNumber > targetBalanceToRich) {
+    jsconfetti.addConfetti();
+  }
 });
 
 // Method when clicking on add bill button. 
@@ -27,4 +40,8 @@ addBillButton.addEventListener('click', () => {
   balanceNumber += 100;
   balance.innerHTML = balanceNumber;
   display.insertAdjacentHTML('beforeend', billImg); 
+  
+  if(balanceNumber > targetBalanceToRich) {
+    jsconfetti.addConfetti(); 
+  }
 });
