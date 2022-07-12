@@ -29,9 +29,9 @@ addCoinButton.addEventListener('click', () => {
 
   if(balanceNumber > targetBalanceToRich) {
     jsconfetti.addConfetti();
-    addCoinButton.disabled = true;
-    addBillButton.disabled = true;
     balance.innerHTML = `ยินดีด้วยคุณรวยแล้ว!! ที่จำนวนเงินในบัญชี ${balanceNumber}`;
+    addCoinButton.remove(); 
+    addBillButton.remove();
   }
 });
 
@@ -44,8 +44,8 @@ addBillButton.addEventListener('click', () => {
   
   if(balanceNumber > targetBalanceToRich) {
     jsconfetti.addConfetti(); 
-    addCoinButton.disabled = true;
-    addBillButton.disabled = true;
     balance.innerHTML = `ยินดีด้วยคุณรวยแล้ว!! ที่จำนวนเงินในบัญชี ${balanceNumber}`; 
+    addCoinButton.remove(); 
+    addBillButton.remove();
   } 
 });
