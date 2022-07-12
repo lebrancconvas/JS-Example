@@ -20,8 +20,6 @@ const minBalanceToRich = 1000
 const maxBalanceToRich = 2000;
 const targetBalanceToRich = Math.floor(Math.random() * (maxBalanceToRich - minBalanceToRich) + minBalanceToRich);
 
-console.log(`targetBalanceToRich: ${targetBalanceToRich}`); // Debugging. Remove later.
-
 // Method when clicking on add coin button.
 addCoinButton.addEventListener('click', () => {
   let balanceNumber = parseInt(balance.innerHTML);
