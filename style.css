@@ -3,10 +3,22 @@ body {
   margin: 0;
   text-align: center;
   font-family: 'Mali', cursive;
+  background-image: url('https://thumbs.gfycat.com/AlarmedSandyIridescentshark-size_restricted.gif');
+  background-size: cover;
+  height: 100vh;
+}
+
+#heading {
+  color: #4bf0a3;
+}
+
+#details {
+  color: #82c9ff;
 }
 
 #balance {
   font-size: 50px;
+  color: #e7eb96;
 }
 
 #flex-button {
