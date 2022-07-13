@@ -37,6 +37,7 @@ addCoinButton.addEventListener('click', () => {
     balance.innerHTML = `ยินดีด้วยคุณรวยแล้ว!! ที่จำนวนเงินในบัญชี ${balanceNumber}`;
     addCoinButton.remove(); 
     addBillButton.remove();
+    richSound.volume = 0.5;
     richSound.play();
   }
 });
@@ -54,6 +55,7 @@ addBillButton.addEventListener('click', () => {
     balance.innerHTML = `ยินดีด้วยคุณรวยแล้ว!! ที่จำนวนเงินในบัญชี ${balanceNumber}`; 
     addCoinButton.remove(); 
     addBillButton.remove();
+    richSound.volume = 0.5;
     richSound.play(); 
   } 
 });
