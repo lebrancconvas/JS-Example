@@ -12,6 +12,10 @@ const addBillButton = document.getElementById('addbill');
 const coinImg = `<img src="${coinImgURL}" alt="coin" />`;
 const billImg = `<img src="${billImgURL}" alt="bill" />`;
 
+const coinSound = document.getElementById('coin-audio');
+const billSound = document.getElementById('bill-audio');
+const richSound = document.getElementById('rich-audio'); 
+
 const jsconfetti = new JSConfetti();
 
 balance.innerHTML = '0';
@@ -26,12 +30,14 @@ addCoinButton.addEventListener('click', () => {
   balanceNumber += 10;
   balance.innerHTML = balanceNumber;
   display.insertAdjacentHTML('beforeend', coinImg);
+  coinSound.play();
 
   if(balanceNumber > targetBalanceToRich) {
     jsconfetti.addConfetti();
     balance.innerHTML = `ยินดีด้วยคุณรวยแล้ว!! ที่จำนวนเงินในบัญชี ${balanceNumber}`;
     addCoinButton.remove(); 
     addBillButton.remove();
+    richSound.play();
   }
 });
 
@@ -41,11 +47,13 @@ addBillButton.addEventListener('click', () => {
   balanceNumber += 100;
   balance.innerHTML = balanceNumber;
   display.insertAdjacentHTML('beforeend', billImg); 
+  billSound.play(); 
   
   if(balanceNumber > targetBalanceToRich) {
     jsconfetti.addConfetti(); 
     balance.innerHTML = `ยินดีด้วยคุณรวยแล้ว!! ที่จำนวนเงินในบัญชี ${balanceNumber}`; 
     addCoinButton.remove(); 
     addBillButton.remove();
+    richSound.play(); 
   } 
 });
