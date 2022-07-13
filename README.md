@@ -6,4 +6,6 @@ This is the assignment on Mini Bootcamp #2 by HelloSpec for learning about how t
 
 ## Update
 
-- Add "Be Rich!!" Assignment as a new feature for a repo.
+- [07/07/2022] Create a repo and Init a vanillaJS with Vite.
+  
+- [13/07/2022] Add "Be Rich!!" Assignment as a new feature for a repo.
