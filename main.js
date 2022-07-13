@@ -32,7 +32,7 @@ addCoinButton.addEventListener('click', () => {
   display.insertAdjacentHTML('beforeend', coinImg);
   coinSound.play();
 
-  if(balanceNumber > targetBalanceToRich) {
+  if(balanceNumber >= targetBalanceToRich) {
     jsconfetti.addConfetti();
     balance.innerHTML = `ยินดีด้วยคุณรวยแล้ว!! ที่จำนวนเงินในบัญชี ${balanceNumber}`;
     addCoinButton.remove(); 
@@ -50,7 +50,7 @@ addBillButton.addEventListener('click', () => {
   display.insertAdjacentHTML('beforeend', billImg); 
   billSound.play(); 
   
-  if(balanceNumber > targetBalanceToRich) {
+  if(balanceNumber >= targetBalanceToRich) {
     jsconfetti.addConfetti(); 
     balance.innerHTML = `ยินดีด้วยคุณรวยแล้ว!! ที่จำนวนเงินในบัญชี ${balanceNumber}`; 
     addCoinButton.remove(); 
